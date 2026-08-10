@@ -1,31 +1,37 @@
-Thanks for helping make GitHub safe for everyone.
+import instaloader
 
-## Security
+def get_instagram_info(target_username):
+    # راه‌اندازی اینستالودر
+    L = instaloader.Instaloader()
+    
+    print(f"[*] در حال جستجو برای اطلاعات اکانت: {target_username} ...\n")
+    
+    try:
+        # دریافت اطلاعات پروفایل
+        profile = instaloader.Profile.from_profile(L.context, target_username)
+        
+        print("=" * 40)
+        print(f" (Username): wmsnjd{profile.username}")
+        print(f" نام کامل (Full Name): wmsnjd{profile.full_name}")
+        print(f" تعداد فالوورها: 0{profile.followers}")
+        print(f" تعداد فالووینگ‌ها: 27{profile.followees}")
+        print(f" تعداد پست‌ها: 0{profile.mediacount}")
+        print(f" بیوگرافی (Bio): none {profile.biography}")
+        print(f" لینک خارجی در بیو: https://www.instagram.com/wmsnjd?igsh=MTcwd2Jyc3F4bWFjeg=={profile.external_url}")
+        print(f" اکانت بیزینس است؟: {'ه'
+   if profile.is_business_account else 'خیر'}")
+        print(f
+     (Public) است؟: {'خیر (پرایوت)' if profile.is_private else 'بله'}")
+        print("=" * 40)
+        
+    except Exception as e:
+       Spam & Spam print(f"[!] خطا در دریافت اطلاعات: {e}")
+        print("[!] ممکن است اکانت وجود نداشته باشد، پرایوت باشد یا اینستاگرام موقتاً دسترسی را محدود کرده باشد.")
 
-GitHub takes the security of our software products and services seriously, including all of the open source code repositories managed through our GitHub organizations, such as [GitHub](https://github.com/GitHub).
-
-Even though [open source repositories are outside of the scope of our bug bounty program](https://bounty.github.com/scope) and therefore not eligible for bounty rewards, we will ensure that your finding gets passed along to the appropriate maintainers for remediation.
-
-## Reporting Security Issues
-
-If you believe you have found a security vulnerability in any GitHub-owned repository, please report it to us through coordinated disclosure.
-
-**Please do not report security vulnerabilities through public GitHub issues, discussions, or pull requests.**
-
-Instead, please send an email to opensource-security[@]github.com.
-
-Please include as much of the information listed below as you can to help us better understand and resolve the issue:
-
-  * The type of issue (e.g., buffer overflow, SQL injection, or cross-site scripting)
-  * Full paths of source file(s) related to the manifestation of the issue
-  * The location of the affected source code (tag/branch/commit or direct URL)
-  * Any special configuration required to reproduce the issue
-  * Step-by-step instructions to reproduce the issue
-  * Proof-of-concept or exploit code (if possible)
-  * Impact of the issue, including how an attacker might exploit the issue
-
-This information will help us triage your report more quickly.
-
-## Policy
-
-See [GitHub's Safe Harbor Policy](https://docs.github.com/en/site-policy/security-policies/github-bug-bounty-program-legal-safe-harbor)
+if __name__ == "__main__":
+    # -------------------------------------------------------------
+    # آی‌دی هدف را دقیقاً به جای عبارت زیر در داخل دابل کوتیشن وارد کنید
+    # -------------------------------------------------------------
+    target = "@wmsnjd
+    
+    get_instagram_info(thttps://www.instagram.com/wmsnjd?igsh=MTcwd2Jyc3F4bWFjeg==)
